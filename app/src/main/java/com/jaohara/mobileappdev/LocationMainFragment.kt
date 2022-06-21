@@ -50,6 +50,7 @@ class LocationMainFragment : Fragment(),
   }
 
   private fun getLocation() {
+    Log.i("LocationMainFragment::getLocation", "Calling getLocation");
     // TODO: Do I need to have better feedback in the event that context doesn't exist? Will it ever?
     context?.let {
       locationManager = it.getSystemService(Context.LOCATION_SERVICE) as LocationManager;
@@ -68,10 +69,10 @@ class LocationMainFragment : Fragment(),
       // I think
       locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 5f, this);
     }
-
   }
 
   private fun getCamerasAndAddToMap(map: GoogleMap) {
+    Log.i("LocationMainFragment::getCamerasAndAddToMap", "Calling getCamerasAndAddToMap");
     JohnTools.getCameraDataCall().enqueue(object : Callback<CameraData?> {
       override fun onResponse(call: Call<CameraData?>, response: Response<CameraData?>) {
         val responseBody = response.body()!!;
@@ -131,6 +132,7 @@ class LocationMainFragment : Fragment(),
   }
 
   override fun onMarkerClick(marker: Marker): Boolean {
+    Log.i("LocationMainFragment::onMarkerClick", "Calling onMarkerClick");
     TODO("Not yet implemented")
   }
 
@@ -151,8 +153,10 @@ class LocationMainFragment : Fragment(),
 
   override fun onLocationChanged(location: Location) {
     if (this.initialLocation == null && map != null) {
+      Log.i("LocationMainFragment::onLocationChanged", "setting initialLocation:")
       val initialLocation = LatLng(location.latitude, location.longitude);
       this.initialLocation = initialLocation;
+      Log.i("LocationMainFragment::onLocationChanged", "initialLocation is $initialLocation")
       map.moveCamera(CameraUpdateFactory.newLatLng(initialLocation));
     }
   }

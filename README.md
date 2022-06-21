@@ -1,8 +1,8 @@
 # Outstanding Assignments
 
 ## Prep
-- [ ] Setup Git Repository
-- [ ] Review Kotlin
+- [*] Setup Git Repository
+- [*] Review Kotlin
 
 
 ## HW 3 - [Zombie Activities](https://canvas.northseattle.edu/courses/2206721/assignments/25893047?module_item_id=63061990)
