@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MobileAppDev</string>
+    <string name="hw3">HW 3: Movies</string>
+    <string name="hw4">HW 4: Traffic Cams</string>
+    <string name="hw5">HW 5: Location Mapping</string>
+    <string name="hw6">HW 6: ?</string>
+
+    <!-- TODO: Remove Placeholders -->
+    <string name="hello_main">This is the main fragment!</string>
+    <string name="hello_location">This is the location/map fragment!</string>
+    <string name="hello_movies">This is the movie fragment!</string>
+    <string name="hello_traffic">This is the traffic cam fragment!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="movie_detail_year_label">Year: </string>
+    <string name="movie_detail_director_label">Director: </string>
+
+    <string name="network_disconnected_message">Sorry, this feature requires network connectivity in order to function. Please ensure you are connected to the internet and try again.</string>
+</resources>

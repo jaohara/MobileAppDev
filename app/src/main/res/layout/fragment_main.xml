@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_dark"
+    tools:context=".MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hw3Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_light"
+            android:paddingHorizontal="16dp"
+            android:radius="8dp"
+            android:text="@string/hw3"
+            android:textAlignment="viewStart"
+            android:textColor="@color/hw3"
+            android:textSize="20sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hw4Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/gray_light"
+            android:paddingHorizontal="16dp"
+            android:radius="8dp"
+            android:text="@string/hw4"
+            android:textAlignment="viewStart"
+            android:textColor="@color/hw4"
+            android:textSize="20sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hw3Button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hw5Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/gray_light"
+            android:paddingHorizontal="16dp"
+            android:radius="8dp"
+            android:text="@string/hw5"
+            android:textAlignment="viewStart"
+            android:textColor="@color/hw5"
+            android:textSize="20sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hw4Button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hw6Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:alpha=".66"
+            android:background="@color/gray_light"
+            android:paddingHorizontal="16dp"
+            android:radius="8dp"
+            android:text="@string/hw6"
+            android:textAlignment="viewStart"
+            android:textColor="@color/hw6"
+            android:textSize="20sp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hw5Button"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

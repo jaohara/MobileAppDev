@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jaohara.mobileappdev.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/mainToMovieMain"
+            app:destination="@id/movieMainFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/mainToTrafficMain"
+            app:destination="@id/trafficMainFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/mainToLocationMain"
+            app:destination="@id/locationMainFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieMainFragment"
+        android:name="com.jaohara.mobileappdev.MovieMainFragment"
+        android:label="fragment_movie_main"
+        tools:layout="@layout/fragment_movie_main" />
+    <fragment
+        android:id="@+id/locationMainFragment"
+        android:name="com.jaohara.mobileappdev.LocationMainFragment"
+        android:label="fragment_location_main"
+        tools:layout="@layout/fragment_location_main" />
+    <fragment
+        android:id="@+id/trafficMainFragment"
+        android:name="com.jaohara.mobileappdev.TrafficMainFragment"
+        android:label="fragment_traffic_main"
+        tools:layout="@layout/fragment_traffic_main" />
+</navigation>
