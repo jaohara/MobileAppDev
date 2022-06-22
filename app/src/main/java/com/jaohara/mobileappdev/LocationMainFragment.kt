@@ -45,7 +45,6 @@ class LocationMainFragment : Fragment(),
   private fun changeNavTitle () {
     val actionBar = (requireActivity() as AppCompatActivity).supportActionBar;
     actionBar?.title = getString(R.string.hw5);
-    actionBar?.setDisplayHomeAsUpEnabled(true);
     actionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.hw5)));
   }
 

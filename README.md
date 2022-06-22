@@ -5,17 +5,17 @@
 - [x] Review Kotlin
 
 
-## HW 3 - [Zombie Activities](https://canvas.northseattle.edu/courses/2206721/assignments/25893047?module_item_id=63061990)
+## ✅ HW 3 - [Zombie Activities](https://canvas.northseattle.edu/courses/2206721/assignments/25893047?module_item_id=63061990)
 - [x] Have two Fragments for `Movies` and `MovieDetails`
 - [x] Launch `Movie` Fragment when home page button is clicked
 - [x] Display **Title** and **Year** for each movie in a list
 - [x] Launch `MovieDetail` with **Title, Year, Director, and Description** being sent as an intent bundle when clicked
-- [ ] Enable Screen Title and Back Navigation on both activities
-## HW 4 - [Live Cams](https://canvas.northseattle.edu/courses/2206721/assignments/25893048?module_item_id=63061992)
+- [x] Enable Screen Title and Back Navigation on both activities
+## ✅ HW 4 - [Live Cams](https://canvas.northseattle.edu/courses/2206721/assignments/25893048?module_item_id=63061992)
 - [x] Create Fragment for Traffic Cam List
 - [x] Load JSON list of cameras at runtime
 - [x] Map JSON data to `Camera` class for use within application
-- [ ] Check device connectivity status and display a graceful warning if not connected
+- [x] Check device connectivity status and display a graceful warning if not connected
 ## HW 5 - [Location](https://canvas.northseattle.edu/courses/2206721/assignments/25893049?module_item_id=63061994)
 - [x] Create Fragment for Google Maps
 - [ ] Detect User's current location 

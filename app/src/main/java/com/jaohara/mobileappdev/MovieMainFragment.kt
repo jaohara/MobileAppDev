@@ -29,7 +29,6 @@ class MovieMainFragment : Fragment(){
   private fun changeNavTitle () {
     val actionBar = (requireActivity() as AppCompatActivity).supportActionBar;
     actionBar?.title = getString(R.string.hw3);
-    actionBar?.setDisplayHomeAsUpEnabled(true);
     actionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.hw3)));
   }
 

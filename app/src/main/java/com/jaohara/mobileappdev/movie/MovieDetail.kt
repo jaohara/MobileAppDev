@@ -19,14 +19,17 @@ class MovieDetail() : Fragment() {
   private var _binding: FragmentMovieDetailBinding? = null;
   private val binding get() = _binding!!;
 
-  private fun changeNavTitle () {
-    val actionBar = (requireActivity() as AppCompatActivity).supportActionBar;
-    actionBar?.title = getString(R.string.hw3);
-    actionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.hw3)));
+  private fun setTitle(title: String) {
+    (requireActivity() as AppCompatActivity).supportActionBar?.title = title;
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+  }
+
+  override fun onDestroyView() {
+    setTitle(getString(R.string.hw3));
+    super.onDestroyView();
   }
 
   override fun onCreateView(
@@ -45,6 +48,8 @@ class MovieDetail() : Fragment() {
       binding.movieDetailTitle.text = Movie.movies[position][0];
       binding.movieDetailYear.text = Movie.movies[position][1];
       binding.movieDetailDescription.text = Movie.movies[position][4];
+
+      setTitle(Movie.movies[position][0]);
 
       // I don't like how this has to make a request every time - how can I save this image?
       context?.let {

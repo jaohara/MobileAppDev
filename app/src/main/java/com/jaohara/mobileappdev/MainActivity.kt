@@ -13,13 +13,19 @@ import androidx.navigation.NavController
 class MainActivity : AppCompatActivity(), MovieMainFragment.OnFragmentInteractionListener {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState);
-//    setupNavTitles();
+    setupNavTitles();
     setContentView(R.layout.activity_main);
+
   }
 
   // TODO: Is this the best place to set navbar titles?
   private fun setupNavTitles() {
-    val navController = Navigation.findNavController(this, R.id.main_nav_host_fragment)
+    supportActionBar?.setDisplayHomeAsUpEnabled(true);
+  }
+
+  override fun onSupportNavigateUp(): Boolean {
+    onBackPressed();
+    return true;
   }
 
   // created to implement communication between fragments and activities

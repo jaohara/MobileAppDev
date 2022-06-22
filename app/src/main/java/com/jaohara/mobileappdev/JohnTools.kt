@@ -38,10 +38,5 @@ class JohnTools {
 
       return retrofitBuilder.getData();
     }
-
-    // The idea here would be to have this accept a lambda so you can have this
-    //  handle executing the callback rather than using an if statement. Maybe not
-    //  as useful as I imagine.
-//    fun callIfNetworkIsConnected()
   }
 }
