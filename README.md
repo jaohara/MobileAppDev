@@ -18,11 +18,11 @@
 - [x] Check device connectivity status and display a graceful warning if not connected
 ## HW 5 - [Location](https://canvas.northseattle.edu/courses/2206721/assignments/25893049?module_item_id=63061994)
 - [x] Create Fragment for Google Maps
-- [ ] Detect User's current location 
-- [ ] Center Map on User's current location
-- [ ] Display a **Blue** Marker on User's Current Location
-- [ ] Display a **Red** Marker for each traffic camera loaded in previous assignment
-- [ ] Display the camera label when a marker is clicked
+- [x] Detect User's current location 
+- [x] Center Map on User's current location
+- [x] Display a **Blue** Marker on User's Current Location
+- [x] Display a **Red** Marker for each traffic camera loaded in previous assignment
+- [x] Display the camera label when a marker is clicked
 - [ ] **Extra Credit:** Show geocoded address of the user's location 
 ## HW 6 - [Data Persistence](https://canvas.northseattle.edu/courses/2206721/assignments/25893050?module_item_id=63061997)
 - [ ] Contact Brenden about Firebase login

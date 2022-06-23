@@ -28,6 +28,13 @@ class JohnTools {
         .show();
     }
 
+    fun displayLocationDialog(context: Context): Unit {
+      AlertDialog.Builder(context)
+        .setTitle("No Location Access")
+        .setMessage(R.string.location_disconnected_message)
+        .show();
+    }
+
     // Queries cameras
     fun getCameraDataCall(): Call<CameraData> {
       val retrofitBuilder = Retrofit.Builder()

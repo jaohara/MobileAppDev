@@ -17,4 +17,5 @@
     <string name="movie_detail_director_label">Director: </string>
 
     <string name="network_disconnected_message">Sorry, this feature requires network connectivity in order to function. Please ensure you are connected to the internet and try again.</string>
+    <string name="location_disconnected_message">Sorry, this feature requires location permission in order to function. Please ensure you are connected to the internet and try again.</string>
 </resources>

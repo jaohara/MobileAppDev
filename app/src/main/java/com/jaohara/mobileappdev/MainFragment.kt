@@ -70,7 +70,7 @@ class MainFragment : Fragment() {
     }
 
     binding.hw5Button.setOnClickListener{
-      Navigation.findNavController(it).navigate(R.id.mainToLocationMain);
+      Navigation.findNavController(it).navigate(R.id.mainToMaps);
     }
   }
 

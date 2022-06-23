@@ -11,6 +11,9 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
+            android:id="@+id/mainToMaps"
+            app:destination="@id/mapsFragment" />
+        <action
             android:id="@+id/mainToMovieMain"
             app:destination="@id/movieMainFragment"
             app:enterAnim="@android:anim/fade_in"
@@ -46,4 +49,9 @@
         android:name="com.jaohara.mobileappdev.TrafficMainFragment"
         android:label="fragment_traffic_main"
         tools:layout="@layout/fragment_traffic_main" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.jaohara.mobileappdev.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>
