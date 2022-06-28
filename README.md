@@ -25,10 +25,11 @@
 - [x] Display the camera label when a marker is clicked
 - [ ] **Extra Credit:** Show geocoded address of the user's location 
 ## HW 6 - [Data Persistence](https://canvas.northseattle.edu/courses/2206721/assignments/25893050?module_item_id=63061997)
-- [ ] Contact Brenden about Firebase login
-- [ ] Add **Username, email, and password** (hidden text entry) fields on main activity
+- [x] Contact Brenden about Firebase login
+- [x] Add **Username, email, and password** (hidden text entry) fields on main activity
   - [ ] Populate with previously-stored entries if available
-- [ ] Create Login button on main activity
+  - [ ] Use SharedPreferences to store keys
+- [x] Create Login button on main activity
   - [ ] Login Button invokes sign-in function
 - [ ] Create Fragment to load and display data from firebase (check the spec for example)
 - [ ] Create a self-contained function to validate user entries on main fragment

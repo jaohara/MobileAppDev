@@ -22,75 +22,169 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/hw3Button"
-            android:layout_width="0dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/loginContainer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:background="@color/gray_light"
-            android:paddingHorizontal="16dp"
-            android:radius="8dp"
-            android:text="@string/hw3"
-            android:textAlignment="viewStart"
-            android:textColor="@color/hw3"
-            android:textSize="20sp"
-            app:cornerRadius="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/gray_light"
+            app:contentPadding="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/hw4Button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@color/gray_light"
-            android:paddingHorizontal="16dp"
-            android:radius="8dp"
-            android:text="@string/hw4"
-            android:textAlignment="viewStart"
-            android:textColor="@color/hw4"
-            android:textSize="20sp"
-            app:cornerRadius="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hw3Button" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_light"
+                android:backgroundTint="@color/gray_light">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/hw5Button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@color/gray_light"
-            android:paddingHorizontal="16dp"
-            android:radius="8dp"
-            android:text="@string/hw5"
-            android:textAlignment="viewStart"
-            android:textColor="@color/hw5"
-            android:textSize="20sp"
-            app:cornerRadius="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hw4Button" />
+                <EditText
+                    android:id="@+id/loginUsername"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/edit_text"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Username"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHighlight="@color/blue"
+                    android:textColorLink="@color/blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/hw6Button"
-            android:layout_width="0dp"
+                <EditText
+                    android:id="@+id/loginEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:drawable/edit_text"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHighlight="@color/blue"
+                    android:textColorLink="@color/blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginUsername" />
+
+                <Button
+                    android:id="@+id/Login"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/blue"
+                    android:backgroundTint="@color/blue"
+                    android:text="Login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+
+                <EditText
+                    android:id="@+id/loginPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:drawable/edit_text"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHighlight="@color/blue"
+                    android:textColorLink="@color/blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:alpha=".66"
-            android:background="@color/gray_light"
-            android:paddingHorizontal="16dp"
-            android:radius="8dp"
-            android:text="@string/hw6"
-            android:textAlignment="viewStart"
-            android:textColor="@color/hw6"
-            android:textSize="20sp"
-            app:cornerRadius="16dp"
+            app:contentPadding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hw5Button"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hw6Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:alpha=".66"
+                    android:background="@color/hw6"
+                    android:paddingHorizontal="16dp"
+                    android:radius="8dp"
+                    android:text="@string/hw6"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hw5Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/hw5"
+                    android:paddingHorizontal="16dp"
+                    android:radius="8dp"
+                    android:text="@string/hw5"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hw4Button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hw4Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/hw4"
+                    android:paddingHorizontal="16dp"
+                    android:radius="8dp"
+                    android:text="@string/hw4"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hw3Button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hw3Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hw3"
+                    android:paddingHorizontal="16dp"
+                    android:radius="8dp"
+                    android:text="@string/hw3"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
