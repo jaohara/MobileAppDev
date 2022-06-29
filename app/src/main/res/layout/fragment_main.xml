@@ -26,11 +26,13 @@
             android:id="@+id/loginContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="12dp"
             android:background="@color/gray_light"
             android:backgroundTint="@color/gray_light"
             app:contentPadding="12dp"
             app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -104,14 +106,20 @@
             android:id="@+id/buttonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_light"
+            android:backgroundTint="@color/gray_light"
             app:contentPadding="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginContainer">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:background="@color/gray_light"
+                android:backgroundTint="@color/gray_light">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/hw6Button"
@@ -129,7 +137,7 @@
                     app:cornerRadius="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hw5Button"
                     tools:ignore="TextContrastCheck" />
 
                 <androidx.appcompat.widget.AppCompatButton
