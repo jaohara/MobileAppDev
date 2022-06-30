@@ -14,8 +14,13 @@ class MainActivity : AppCompatActivity(), MovieMainFragment.OnFragmentInteractio
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState);
     setupNavTitles();
+    setupNavBarColor();
     setContentView(R.layout.activity_main);
 
+  }
+
+  private fun setupNavBarColor() {
+    window.navigationBarColor = getColor(R.color.gray_light);
   }
 
   // TODO: Is this the best place to set navbar titles?

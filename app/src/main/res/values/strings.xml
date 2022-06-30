@@ -3,7 +3,7 @@
     <string name="hw3">HW 3: Movies</string>
     <string name="hw4">HW 4: Traffic Cams</string>
     <string name="hw5">HW 5: Location Mapping</string>
-    <string name="hw6">HW 6: ?</string>
+    <string name="hw6">HW 6: FireBase</string>
 
     <!-- TODO: Remove Placeholders -->
     <string name="hello_main">This is the main fragment!</string>
