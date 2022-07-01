@@ -27,13 +27,13 @@
 ## HW 6 - [Data Persistence](https://canvas.northseattle.edu/courses/2206721/assignments/25893050?module_item_id=63061997)
 - [x] Contact Brenden about Firebase login
 - [x] Add **Username, email, and password** (hidden text entry) fields on main activity
-  - [ ] Populate with previously-stored entries if available
-  - [ ] Use SharedPreferences to store keys
+  - [x] Populate with previously-stored entries if available
+  - [x] Use SharedPreferences to store keys
 - [x] Create Login button on main activity
-  - [ ] Login Button invokes sign-in function
+  - [x] Login Button invokes sign-in function
 - [ ] Create Fragment to load and display data from firebase (check the spec for example)
-- [ ] Create a self-contained function to validate user entries on main fragment
-- [ ] Add Firebase dependencies to app
+- [x] Create a self-contained function to validate user entries on main fragment
+- [x] Add Firebase dependencies to app
 ## HW 7 - [App Publishing](https://canvas.northseattle.edu/courses/2206721/assignments/25893051?module_item_id=63062000)
 - [ ] Signup for Android Developer account or whatever it is
 - [ ] Just follow the guide?

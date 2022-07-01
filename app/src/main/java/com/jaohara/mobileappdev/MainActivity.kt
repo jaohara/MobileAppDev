@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.navigation.NavController
+import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity(), MovieMainFragment.OnFragmentInteractionListener {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity(), MovieMainFragment.OnFragmentInteractio
     setupNavTitles();
     setupNavBarColor();
     setContentView(R.layout.activity_main);
-
+    FirebaseApp.initializeApp(applicationContext);
   }
 
   private fun setupNavBarColor() {

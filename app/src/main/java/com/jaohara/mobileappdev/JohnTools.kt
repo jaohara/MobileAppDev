@@ -1,5 +1,6 @@
 package com.jaohara.mobileappdev
 
+import android.app.Activity
 import android.content.Context
 import android.net.ConnectivityManager
 import android.widget.Toast
@@ -33,6 +34,10 @@ class JohnTools {
         .setTitle("No Location Access")
         .setMessage(R.string.location_disconnected_message)
         .show();
+    }
+
+    fun displayFirebaseFailureToast(activity: Activity) {
+      Toast.makeText(activity, "Sign In Failed", Toast.LENGTH_SHORT).show();
     }
 
     // Queries cameras
