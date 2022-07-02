@@ -16,23 +16,24 @@
 - [x] Load JSON list of cameras at runtime
 - [x] Map JSON data to `Camera` class for use within application
 - [x] Check device connectivity status and display a graceful warning if not connected
-## HW 5 - [Location](https://canvas.northseattle.edu/courses/2206721/assignments/25893049?module_item_id=63061994)
+## ✅ HW 5 - [Location](https://canvas.northseattle.edu/courses/2206721/assignments/25893049?module_item_id=63061994)
 - [x] Create Fragment for Google Maps
 - [x] Detect User's current location 
 - [x] Center Map on User's current location
 - [x] Display a **Blue** Marker on User's Current Location
 - [x] Display a **Red** Marker for each traffic camera loaded in previous assignment
 - [x] Display the camera label when a marker is clicked
-- [ ] **Extra Credit:** Show geocoded address of the user's location 
-## HW 6 - [Data Persistence](https://canvas.northseattle.edu/courses/2206721/assignments/25893050?module_item_id=63061997)
+## ✅ HW 6 - [Data Persistence](https://canvas.northseattle.edu/courses/2206721/assignments/25893050?module_item_id=63061997)
 - [x] Contact Brenden about Firebase login
 - [x] Add **Username, email, and password** (hidden text entry) fields on main activity
-  - [x] Populate with previously-stored entries if available
-  - [x] Use SharedPreferences to store keys
 - [x] Create Login button on main activity
   - [x] Login Button invokes sign-in function
-- [ ] Create Fragment to load and display data from firebase (check the spec for example)
+- [x] Create Fragment to load and display data from firebase (check the spec for example)
+  - [x] Copy contents over from `activity_firebase.xml` template and modify to fit fragment
+  - [x] Integrate `list_item.xml` into project structure (or recreate?)
+  - [x] Recreate `FirebaseActivity.java` functionality in `FirebaseFragment.kt`
 - [x] Create a self-contained function to validate user entries on main fragment
+  - [x] Add validation criteria and failure states for invalid entries
 - [x] Add Firebase dependencies to app
 ## HW 7 - [App Publishing](https://canvas.northseattle.edu/courses/2206721/assignments/25893051?module_item_id=63062000)
 - [ ] Signup for Android Developer account or whatever it is

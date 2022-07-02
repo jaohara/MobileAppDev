@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,7 @@ import com.jaohara.mobileappdev.databinding.FragmentMainBinding
   Navigation Graph.
  */
 class MainFragment : Fragment() {
+  private var isLoggedIn = false;
   private var _binding: FragmentMainBinding? = null;
   private val binding get() = _binding!!
 
@@ -40,9 +42,25 @@ class MainFragment : Fragment() {
     actionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.gray_light)));
   }
 
-  // TODO: What am I validating here? That the email is an email?
   private fun validateInput(): Boolean {
-    return true;
+    var inputsAreValid = true;
+
+    for (field in arrayOf(binding.loginUsername, binding.loginEmail, binding.loginPassword)) {
+      when (TextUtils.isEmpty(field.text.toString())) {
+        true -> {
+          inputsAreValid = false;
+          field.error = "Required Field";
+        };
+        false -> field.error = null;
+      }
+    }
+
+    return inputsAreValid;
+  }
+
+  private fun enableHw6ButtonIfLoggedIn() {
+    binding.hw6Button.alpha = if (isLoggedIn) 1.0f else .66f;
+    binding.hw6Button.isEnabled = isLoggedIn;
   }
 
   private fun signIn() {
@@ -77,6 +95,8 @@ class MainFragment : Fragment() {
             Log.d("FIREBASE", "signIn:onComplete:" + task.isSuccessful);
 
             if (task.isSuccessful) {
+              isLoggedIn = true;
+
               // update profile. displayName is the value entered in UI
               val user = FirebaseAuth.getInstance().currentUser
               val profileUpdates = UserProfileChangeRequest.Builder()
@@ -87,7 +107,6 @@ class MainFragment : Fragment() {
                   if (task.isSuccessful) {
                     Log.d("FIREBASE", "User profile updated.")
                     // Go to FirebaseActivity
-//                    startActivity(Intent(this@MainActivity, FirebaseActivity::class.java))
                     findNavController().navigate(R.id.mainToFirebase);
                   }
                 }
@@ -100,8 +119,13 @@ class MainFragment : Fragment() {
           });
     }
 
+    enableHw6ButtonIfLoggedIn();
   }
 
+  private fun setupNavTitleAndHw6Button() {
+    changeNavTitle();
+    enableHw6ButtonIfLoggedIn();
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -128,6 +152,8 @@ class MainFragment : Fragment() {
       binding.loginEmail.setText(sharedPrefs.getString("email", ""));
       binding.loginPassword.setText(sharedPrefs.getString("password", ""));
     }
+
+
 
     return binding.root;
   }
@@ -170,22 +196,8 @@ class MainFragment : Fragment() {
     // login button setup
     binding.Login.setOnClickListener { signIn() }
 
-    // old way - remove when you're totally certain about above
-//    binding.hw3Button.setOnClickListener{
-//      Navigation.findNavController(it).navigate(R.id.mainToMovieMain);
-//    }
-//
-//    binding.hw4Button.setOnClickListener{
-//      Navigation.findNavController(it).navigate(R.id.mainToTrafficMain);
-//    }
-//
-//    binding.hw5Button.setOnClickListener{
-//      Navigation.findNavController(it).navigate(R.id.mainToMaps);
-//    }
-//
-//    binding.hw6Button.setOnClickListener{
-//      Navigation.findNavController(it).navigate(R.id.mainToFirebase);
-//    }
+    // set hw6 button to proper state
+    enableHw6ButtonIfLoggedIn();
   }
 
   companion object {

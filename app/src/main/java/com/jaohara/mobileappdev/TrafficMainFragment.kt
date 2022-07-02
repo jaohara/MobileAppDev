@@ -58,14 +58,6 @@ class TrafficMainFragment : Fragment() {
     });
   }
 
-
-  private fun showNetworkErrorToast() {
-    Toast.makeText(context,
-      "Sorry, network connectivity must be activated to use these features.",
-      Toast.LENGTH_LONG
-    ).show();
-  }
-
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
@@ -78,7 +70,6 @@ class TrafficMainFragment : Fragment() {
 
     changeNavTitle();
   }
-
 
   override fun onResume() {
     super.onResume();

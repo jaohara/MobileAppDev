@@ -24,7 +24,6 @@ class MovieMainFragment : Fragment(){
   private var _binding: FragmentMovieMainBinding? = null;
   private val binding get() = _binding!!;
 
-
   // TODO: Figure out a way to make this reusable and put it in JohnTools
   private fun changeNavTitle () {
     val actionBar = (requireActivity() as AppCompatActivity).supportActionBar;
@@ -34,10 +33,6 @@ class MovieMainFragment : Fragment(){
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    arguments?.let {
-
-    }
-
     changeNavTitle();
   }
 
@@ -64,7 +59,6 @@ class MovieMainFragment : Fragment(){
   }
 
   companion object {
-
     @JvmStatic
     fun newInstance(param1: String, param2: String) =
       MovieMainFragment().apply {
